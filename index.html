@@ -5,66 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murat Göçmen - IT-Support & Webdesign</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; }
-        header { background: #2c3e50; color: #fff; padding: 2rem; text-align: center; border-radius: 8px; }
-        .contact-info { margin-top: 10px; font-size: 0.9em; }
-        section { background: #fff; margin: 20px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 5px; }
-        .job { margin-bottom: 15px; }
-        .job-title { font-weight: bold; color: #e67e22; }
-        .date { font-style: italic; color: #666; float: right; }
-        .skill-tag { background: #ecf0f1; padding: 5px 10px; border-radius: 4px; display: inline-block; margin: 5px 2px; font-size: 0.9em; border: 1px solid #bdc3c7; }
-        @media (max-width: 600px) { .date { float: none; display: block; margin-bottom: 5px; } }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; }
+        header { background: #2c3e50; color: #fff; padding: 30px; text-align: center; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #fff; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .header-text { text-align: left; }
+        section { background: #fff; margin: 20px 0; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .job-title { font-weight: bold; color: #2980b9; font-size: 1.1em; }
+        .date { font-style: italic; color: #7f8c8d; float: right; }
+        .skill-tag { background: #3498db; color: white; padding: 5px 12px; border-radius: 15px; display: inline-block; margin: 5px 2px; font-size: 0.9em; }
+        .highlight { color: #27ae60; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Murat Göçmen</h1>
-    <p>IT-Support-Spezialist | Webdesign | Führungskraft</p>
-    <div class="contact-info">
-        Karlsruhe | Tel: +49 176 46783721 | muratgoecmen@mail.de
+    <img src="profil.jpg" alt="Murat Göçmen" class="profile-img">
+    <div class="header-text">
+        <h1 style="margin:0;">Murat Göçmen</h1>
+        <p style="font-size: 1.2em; margin: 5px 0;">IT-Support-Spezialist & Webdesigner</p>
+        <p>Karlsruhe | Tel: +49 176 46783721 | muratgoecmen@mail.de</p>
     </div>
 </header>
 
-<section id="profil">
-    <h2>Profil</h2>
-    <p>Vielseitiger IT-Support-Spezialist mit Expertise in technischer Fehleranalyse, Netzwerktechnik und Teamsteuerung. Zertifizierter Webdesigner mit fundierten Kenntnissen in SQL und PHP.</p>
+<section>
+    <h2>Über mich</h2>
+    <p>Erfahrene Führungskraft mit starkem technischem Hintergrund. Spezialisiert auf 1st Level Support, Fehleranalyse und Web-Technologien. <span class="highlight">92 Punkte in SQL & Datenbanken</span> belegen meine strukturierte Arbeitsweise.</p>
 </section>
 
-<section id="erfahrung">
+<section>
     <h2>Berufserfahrung</h2>
-    <div class="job">
+    <div style="margin-bottom: 20px;">
         <span class="date">05/2025 – heute</span>
         <div class="job-title">Technischer Support (1st Level) - Vodafone Projekt</div>
-        <p>Fehleranalyse bei Breitband- und TV-Störungen, Hardware-Konfiguration, CRM-Dokumentation.</p>
+        <p>Fehleranalyse bei Breitband-Störungen, Hardware-Konfiguration und CRM-Dokumentation.</p>
     </div>
-    <div class="job">
+    <div>
         <span class="date">03/2010 – 02/2025</span>
         <div class="job-title">Teamleiter / Zusteller - Deutsche Post DHL</div>
-        <p>Verantwortung für bis zu 100 Mitarbeiter, Personaleinsatzplanung (SAP), Qualitätssicherung.</p>
+        <p>Verantwortung für Personalplanung (SAP) und Qualitätssicherung für bis zu 100 Mitarbeiter.</p>
     </div>
 </section>
 
-<section id="it-skills">
-    <h2>Technische Qualifikationen</h2>
+<section>
+    <h2>IT-Skills & Zertifikate</h2>
     <div>
         <span class="skill-tag">HTML5 / CSS3</span>
-        <span class="skill-tag">SQL (Microsoft SQL Server / MySQL)</span>
-        <span class="skill-tag">PHP</span>
-        <span class="skill-tag">SAP (Personalplanung)</span>
+        <span class="skill-tag">SQL (92/100 Punkte)</span>
+        <span class="skill-tag">PHP & MySQL</span>
         <span class="skill-tag">Netzwerktechnik</span>
-        <span class="skill-tag">Adobe Photoshop</span>
+        <span class="skill-tag">SAP & CRM</span>
     </div>
-</section>
-
-<section id="bildung">
-    <h2>Zertifikate</h2>
-    <ul>
-        <li><strong>Webdesign:</strong> alfatraining (Planung, Strukturierung, Programmierung)</li>
-        <li><strong>Datenbanken & SQL:</strong> alfatraining (92 Punkte - Sehr Gut)</li>
-        <li><strong>IT-Support:</strong> Google Technical Support Fundamentals</li>
-    </ul>
 </section>
 
 </body>
