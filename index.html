@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a365d; /* Dunkelblau für Seriosität */
-            --secondary: #3182ce; /* Blau für Technik */
-            --accent: #38a169; /* Grün für Highlights (SQL) */
+            --primary: #1a365d;
+            --secondary: #3182ce;
+            --accent: #38a169;
             --light: #f7fafc;
             --text: #2d3748;
         }
@@ -25,26 +25,14 @@
         section { background: white; margin-bottom: 30px; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
         h2 { font-size: 1.6rem; color: var(--primary); margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
         h2::after { content: ""; flex: 1; height: 2px; background: #e2e8f0; }
+        h3 { font-size: 1.1rem; color: var(--secondary); margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
         
-        .highlight-card { background: var(--light); border-left: 6px solid var(--accent); padding: 25px; border-radius: 10px; margin-bottom: 20px; font-size: 1.1rem; }
-
-        .job-card { margin-bottom: 35px; border-bottom: 1px solid #edf2f7; padding-bottom: 20px; }
-        .job-card:last-child { border: none; }
-        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
-        .job-title { font-size: 1.25rem; font-weight: 700; color: var(--primary); }
-        .job-date { color: var(--secondary); font-weight: 600; font-size: 0.95rem; }
-        .job-details { list-style: none; padding-left: 0; }
-        .job-details li::before { content: "▹"; color: var(--secondary); margin-right: 10px; font-weight: bold; }
-
-        .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
-        .skill-tag { background: #e2e8f0; padding: 8px 15px; border-radius: 8px; text-align: center; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
-        .skill-tag:hover { background: var(--secondary); color: white; }
-        .skill-tag.focus { background: var(--accent); color: white; }
-
-        .cert-button { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: var(--primary); font-weight: 600; margin: 5px; transition: 0.2s; }
+        .cert-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+        .cert-button { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: var(--primary); font-weight: 600; transition: 0.2s; font-size: 0.9rem; }
         .cert-button:hover { border-color: var(--secondary); background: var(--light); transform: translateY(-2px); }
+        .cert-button::before { content: "📄"; }
 
-        @media (max-width: 768px) { header { text-align: center; justify-content: center; } .job-header { flex-direction: column; } }
+        @media (max-width: 768px) { header { text-align: center; justify-content: center; } .cert-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -58,67 +46,43 @@
             <span>📍 Karlsruhe</span>
             <span>📞 +49 176 46783721</span>
             <span>📧 muratgoecmen@mail.de</span>
-            <span>🔗 murat2025.github.io</span>
         </div>
     </div>
 </header>
 
-<section>
-    <h2>Kurzprofil</h2>
-    <div class="highlight-card">
-        Als technologiebegeisterte Führungskraft mit einer Leidenschaft für Datenbanken und komplexe Softwarelösungen verbinde ich <strong>15 Jahre Management-Erfahrung</strong> mit fundiertem IT-Know-how. Mit <strong>92/100 Punkten in SQL</strong> und praktischer Erfahrung im 1st Level Support löse ich technische Probleme strukturiert, empathisch und mit dem nötigen "Biss", um mich auch in tiefgehende Software-Architekturen hineinzufuchsen.
-    </div>
-</section>
+<section id="certificates">
+    <h2>Zertifikate & Belege</h2>
 
-<section>
-    <h2>Berufserfahrung</h2>
-    <div class="job-card">
-        <div class="job-header">
-            <span class="job-title">Technischer Support (1st Level) – Vodafone Projekt</span>
-            <span class="job-date">05/2025 – Heute</span>
-        </div>
-        <ul class="job-details">
-            <li>Systematische Fehleranalyse bei Breitband- und TV-Störungen</li>
-            <li>Anwenderberatung zur Hardware-Konfiguration und Netzwerkoptimierung</li>
-            <li>Professionelle Dokumentation und Fallbearbeitung in komplexen CRM-Systemen</li>
-        </ul>
+    <h3>IT & Webentwicklung</h3>
+    <div class="cert-container">
+        <a href="Lehrgangszertifikat SQL.pdf" class="cert-button" target="_blank">SQL & Datenbanken (92 Pkt.)</a>
+        <a href="Coursera-Zertifikat.pdf" class="cert-button" target="_blank">Google IT-Support Certificate</a>
+        <a href="Lehrgangszertifikat Webdesign.pdf" class="cert-button" target="_blank">Webdesign (85 Pkt.)</a>
+        <a href="Lehrgangszertifikat PHP.pdf" class="cert-button" target="_blank">PHP & MySQL Implementierung</a>
     </div>
-    <div class="job-card">
-        <div class="job-header">
-            <span class="job-title">Teamleiter / Zusteller – Deutsche Post DHL</span>
-            <span class="job-date">03/2010 – 02/2025</span>
-        </div>
-        <ul class="job-details">
-            <li>Verantwortung für Personalplanung und Qualitätsmanagement (bis zu 100 Mitarbeiter)</li>
-            <li>Sicherer Umgang mit SAP zur Prozesssteuerung und Personaleinsatzplanung</li>
-            <li>Hohe Belastbarkeit und lösungsorientiertes Krisenmanagement</li>
-        </ul>
-    </div>
-</section>
 
-<section>
-    <h2>Technische Skills</h2>
-    <div class="skill-grid">
-        <div class="skill-tag focus">SQL (92 Punkte)</div>
-        <div class="skill-tag">CRM-Systeme</div>
-        <div class="skill-tag">HTML5 / CSS3</div>
-        <div class="skill-tag">PHP / MySQL</div>
-        <div class="skill-tag">SAP</div>
-        <div class="skill-tag">Netzwerktechnik</div>
-        <div class="skill-tag">Troubleshooting</div>
-        <div class="skill-tag">Software-Support</div>
+    <h3>Führung & Management (Deutsche Post AG)</h3>
+    <div class="cert-container">
+        <a href="Deutsche Post AG_PROFI ZTL 2 Modul 1-Teilnahmebescheinigung.pdf" class="cert-button" target="_blank">PROFI ZTL 2 Modul 1</a>
+        <a href="Deutsche Post AG_PROFI ZTL 2 Modul 2-Teilnahmebescheinigung.pdf" class="cert-button" target="_blank">PROFI ZTL 2 Modul 2</a>
+        <a href="Deutsche Post AG_Gestern Kollege-heute Vorgesetzter-Teilnahmebescheinigung.pdf" class="cert-button" target="_blank">Vom Kollegen zum Vorgesetzten</a>
+        <a href="Deutsche Post AG_IPT_Krankenrückkehrgespräche und Fehlzeitengespräche richtig führen-Zertifikat.pdf" class="cert-button" target="_blank">Mitarbeitergespräche führen</a>
+        <a href="Deutsche Post AG_Professionell auftreten-Wirkung steigern-Teilnahmebescheinigung.pdf" class="cert-button" target="_blank">Professionell auftreten</a>
     </div>
-</section>
 
-<section id="downloads">
-    <h2>Zertifikate & Unterlagen</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <a href="Lehrgangszertifikat SQL.pdf" class="cert-button" target="_blank">📄 SQL Zertifikat (92 Pkt.)</a>
-        <a href="Coursera-Zertifikat.pdf" class="cert-button" target="_blank">📄 Google IT Support</a>
-        <a href="Lehrgangszertifikat Webdesign.pdf" class="cert-button" target="_blank">📄 Webdesign Zertifikat</a>
-        <a href="Arbeitszeugnis.pdf" class="cert-button" target="_blank">📄 Arbeitszeugnis DHL</a>
-        <a href="Elektrofachkraft-für-festgelegte-Tätigkeiten(GK)-Ausnahmebewilligung_Zertifikat.pdf" class="cert-button" target="_blank">📄 Elektrofachkraft</a>
-        <a href="Staplerschein_DEKRA.pdf" class="cert-button" target="_blank">📄 Staplerschein</a>
+    <h3>Technik & Logistik</h3>
+    <div class="cert-container">
+        <a href="Elektrofachkraft-für-festgelegte-Tätigkeiten(GK)-Ausnahmebewilligung_Zertifikat.pdf" class="cert-button" target="_blank">Elektrofachkraft (HWK)</a>
+        <a href="Staplerschein_DEKRA.pdf" class="cert-button" target="_blank">Staplerschein (DEKRA)</a>
+        <a href="Führerschein.pdf" class="cert-button" target="_blank">Führerschein (B, C1E)</a>
+        <a href="Deutsche Post AG_Ladungssicherung in der Paketzustellung-Teilnahmebescheinigung.pdf" class="cert-button" target="_blank">Ladungssicherung</a>
+        <a href="Deutsche Post AG_OPUS Paket 2.0-Teilnahmebescheinigung.pdf" class="cert-button" target="_blank">OPUS Paket 2.0</a>
+    </div>
+
+    <h3>Allgemeine Zeugnisse</h3>
+    <div class="cert-container">
+        <a href="Arbeitszeugnis.pdf" class="cert-button" target="_blank">Arbeitszeugnis Deutsche Post</a>
+        <a href="Hauptschulabschluss_Bescheinigung.pdf" class="cert-button" target="_blank">Hauptschulabschluss</a>
     </div>
 </section>
 
