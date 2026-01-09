@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murat Göçmen - IT-Support & Webdesign</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
         header { background: #2c3e50; color: #fff; padding: 40px; text-align: center; border-radius: 10px; display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; }
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.2); object-fit: cover; }
         .header-info { text-align: left; }
         section { background: #fff; margin: 20px 0; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: #2980b9; margin-bottom: 10px; border-left: 4px solid #3498db; padding-left: 10px; }
         .job-title { font-weight: bold; color: #2980b9; font-size: 1.1em; }
         .date { font-style: italic; color: #7f8c8d; float: right; }
         .skill-tag { background: #3498db; color: white; padding: 6px 14px; border-radius: 20px; display: inline-block; margin: 5px 2px; font-size: 0.85em; }
+        .cert-list { list-style: none; padding: 0; }
+        .cert-list li { margin-bottom: 8px; padding-left: 20px; position: relative; }
+        .cert-list li::before { content: "📄"; position: absolute; left: 0; }
+        a { color: #3498db; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; color: #2c3e50; }
         .highlight-box { background: #e8f4fd; border-left: 5px solid #27ae60; padding: 15px; margin: 15px 0; }
         @media (max-width: 600px) { header { text-align: center; } .header-info { text-align: center; } .date { float: none; display: block; } }
     </style>
@@ -39,44 +45,61 @@
     <div style="margin-bottom:25px;">
         <span class="date">05/2025 – heute</span>
         <div class="job-title">Technischer Support (1st Level) - Vodafone Projekt</div>
-        <p><strong>Diagnose und Behebung</strong> von Breitband- und TV-Störungen unter Zeitdruck; Konfiguration von Routern und Hardware-Resets; Dokumentation in CRM-Systemen.</p>
+        <p><strong>Diagnose und Behebung</strong> von Breitband- und TV-Störungen; Konfiguration von Routern; Dokumentation in CRM-Systemen.</p>
     </div>
     <div style="margin-bottom:25px;">
         <span class="date">03/2010 – 02/2025</span>
         <div class="job-title">Teamleiter / Zusteller - Deutsche Post DHL</div>
-        <p><strong>Steuerung und Motivation</strong> von Teams bis zu 100 Mitarbeitern; Personaleinsatzplanung via <strong>SAP</strong>; Sicherstellung höchster Qualitätsstandards und Prozessoptimierung.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Fachliche Qualifikationen</h2>
-    <div class="highlight-box">
-        <strong>IT & Web:</strong> HTML5, CSS3, PHP, <strong>SQL (92 Punkte - Sehr Gut)</strong>, Netzwerktechnik, CMS.<br>
-        <strong>Systeme:</strong> Sicherer Umgang mit SAP, CRM-Software und MS Office.
-    </div>
-    <div style="margin-top:10px;">
-        <span class="skill-tag">Elektrofachkraft (HWK)</span>
-        <span class="skill-tag">Staplerschein</span>
-        <span class="skill-tag">Führerschein C1E</span>
+        <p><strong>Steuerung und Motivation</strong> von Teams bis zu 100 Mitarbeitern; Personaleinsatzplanung via SAP; Qualitätssicherung.</p>
     </div>
 </section>
 
 <section>
     <h2>Zertifikate & Belege</h2>
-    <ul>
-        <li><strong>IT-Support:</strong> <a href="Coursera-Zertifikat.pdf" target="_blank">Google Technical Support Fundamentals</a></li>
-        <li><strong>Webdesign:</strong> <a href="Lehrgangszertifikat Webdesign.pdf" target="_blank">Zertifikat alfatraining (85 Punkte)</a></li>
-        <li><strong>Datenbanken:</strong> <a href="Lehrgangszertifikat SQL.pdf" target="_blank">SQL & Administration (92 Punkte)</a></li>
-        <li><strong>Programmierung:</strong> <a href="Lehrgangszertifikat PHP.pdf" target="_blank">PHP & MySQL (alfatraining)</a></li>
-        <li><strong>Führung & Management:</strong> 
-            <a href="Deutsche Post AG_PROFI ZTL 2 Modul 1-Teilnahmebescheinigung.pdf" target="_blank">Teamleitung Modul 1</a> & 
-            <a href="Deutsche Post AG_PROFI ZTL 2 Modul 2-Teilnahmebescheinigung.pdf" target="_blank">Modul 2</a>
-        </li>
-        <li><strong>Elektrotechnik:</strong> <a href="Elektrofachkraft-für-festgelegte-Tätigkeiten(GK)-Ausnahmebewilligung_Zertifikat.pdf" target="_blank">Elektrofachkraft (HWK)</a></li>
-        <li><strong>Arbeitszeugnis:</strong> <a href="Arbeitszeugnis.pdf" target="_blank">Deutsche Post AG (2010-2025)</a></li>
+    
+    <h3>IT & Webentwicklung</h3>
+    <ul class="cert-list">
+        <li><a href="Lehrgangszertifikat SQL.pdf" target="_blank">SQL & Datenbanken (92 Punkte - Sehr Gut)</a></li>
+        <li><a href="Lehrgangszertifikat Webdesign.pdf" target="_blank">Webdesign & HTML/CSS (85 Punkte)</a></li>
+        <li><a href="Lehrgangszertifikat PHP.pdf" target="_blank">PHP & MySQL Datenimplementierung</a></li>
+        <li><a href="Coursera-Zertifikat.pdf" target="_blank">Google Technical Support Fundamentals</a></li>
     </ul>
+
+    <h3>Führung & Management (Deutsche Post AG)</h3>
+    <ul class="cert-list">
+        <li><a href="Deutsche Post AG_PROFI ZTL 2 Modul 1-Teilnahmebescheinigung.pdf" target="_blank">PROFI Teamleitung Modul 1</a> & <a href="Deutsche Post AG_PROFI ZTL 2 Modul 2-Teilnahmebescheinigung.pdf" target="_blank">Modul 2</a></li>
+        <li><a href="Deutsche Post AG_Gestern Kollege-heute Vorgesetzter-Teilnahmebescheinigung.pdf" target="_blank">Vom Kollegen zum Vorgesetzten</a></li>
+        <li><a href="Deutsche Post AG_IPT_Krankenrückkehrgespräche und Fehlzeitengespräche richtig führen-Zertifikat.pdf" target="_blank">Mitarbeitergespräche richtig führen</a></li>
+        <li><a href="Deutsche Post AG_Professionell auftreten-Wirkung steigern-Teilnahmebescheinigung.pdf" target="_blank">Professionelles Auftreten & Wirkung</a></li>
+    </ul>
+
+    <h3>Technik & Logistik</h3>
+    <ul class="cert-list">
+        <li><a href="Elektrofachkraft-für-festgelegte-Tätigkeiten(GK)-Ausnahmebewilligung_Zertifikat.pdf" target="_blank">Elektrofachkraft für festgelegte Tätigkeiten (HWK)</a></li>
+        <li><a href="Staplerschein_DEKRA.pdf" target="_blank">Staplerschein (DEKRA)</a></li>
+        <li><a href="Führerschein.pdf" target="_blank">Führerschein (Klasse B, C1E)</a></li>
+        <li><a href="Deutsche Post AG_Ladungssicherung in der Paketzustellung-Teilnahmebescheinigung.pdf" target="_blank">Ladungssicherung Zertifikat</a></li>
+        <li><a href="Deutsche Post AG_OPUS Paket 2.0-Teilnahmebescheinigung.pdf" target="_blank">OPUS Paket 2.0 Systemschulung</a></li>
+    </ul>
+
+    <h3>Allgemeine Zeugnisse</h3>
+    <ul class="cert-list">
+        <li><a href="Arbeitszeugnis.pdf" target="_blank">Arbeitszeugnis Deutsche Post (Note: Volle Anerkennung)</a></li>
+        <li><a href="Hauptschulabschluss_Bescheinigung.pdf" target="_blank">Anerkennung Hauptschulabschluss (BW)</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Technische Skills</h2>
+    <div>
+        <span class="skill-tag">HTML5 / CSS3</span>
+        <span class="skill-tag">SQL (92 Punkte)</span>
+        <span class="skill-tag">PHP / MySQL</span>
+        <span class="skill-tag">SAP (Personal)</span>
+        <span class="skill-tag">Netzwerktechnik</span>
+        <span class="skill-tag">CRM-Systeme</span>
+    </div>
 </section>
 
 </body>
 </html>
-
