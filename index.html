@@ -3,55 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murat Göçmen | IT-Support & Führungskraft</title>
+    <title>Murat Göçmen | IT-Support & Software-Affinität</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #27ae60;
-            --bg: #f8f9fa;
-            --text: #2c3e50;
+            --primary: #1a365d; /* Dunkelblau für Seriosität */
+            --secondary: #3182ce; /* Blau für Technik */
+            --accent: #38a169; /* Grün für Highlights (SQL) */
+            --light: #f7fafc;
+            --text: #2d3748;
         }
-        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--text); max-width: 1000px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg); }
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: var(--text); max-width: 1000px; margin: 0 auto; padding: 40px 20px; background-color: #edf2f7; }
         
-        /* Header & Profilbild */
-        header { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; }
-        .profile-img { width: 180px; height: 180px; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 3px solid white; }
-        .header-info h1 { margin: 0; font-size: 2.5rem; color: var(--primary); letter-spacing: -1px; }
-        .header-info .tagline { font-size: 1.2rem; color: var(--secondary); font-weight: 600; margin: 5px 0; }
-        .contact-grid { display: grid; grid-template-columns: auto auto; gap: 10px; margin-top: 15px; font-size: 0.95rem; }
+        header { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; border-bottom: 5px solid var(--secondary); }
+        .profile-img { width: 180px; height: 180px; border-radius: 15px; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .header-info h1 { margin: 0; font-size: 2.8rem; color: var(--primary); letter-spacing: -1.5px; }
+        .tagline { font-size: 1.3rem; color: var(--secondary); font-weight: 600; margin-top: 5px; }
+        .contact-box { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; font-size: 0.9rem; color: #718096; }
 
-        /* Sections */
-        section { background: white; margin-bottom: 25px; padding: 35px; border-radius: 15px; box-shadow: 0 2px 15px rgba(0,0,0,0.04); }
-        h2 { font-size: 1.5rem; color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+        section { background: white; margin-bottom: 30px; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        h2 { font-size: 1.6rem; color: var(--primary); margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
+        h2::after { content: ""; flex: 1; height: 2px; background: #e2e8f0; }
         
-        /* Kurzprofil Highlight */
-        .bio-text { font-size: 1.1rem; color: #444; border-radius: 10px; line-height: 1.8; }
+        .highlight-card { background: var(--light); border-left: 6px solid var(--accent); padding: 25px; border-radius: 10px; margin-bottom: 20px; font-size: 1.1rem; }
 
-        /* Timeline/Jobs */
-        .job-item { border-left: 2px solid #eef2f3; padding-left: 25px; position: relative; margin-bottom: 30px; }
-        .job-item::before { content: ""; width: 12px; height: 12px; background: var(--secondary); border-radius: 50%; position: absolute; left: -7px; top: 5px; }
-        .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 5px; }
-        .job-title { font-weight: 700; font-size: 1.15rem; color: var(--primary); }
-        .job-date { background: #eef2f3; padding: 2px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .job-card { margin-bottom: 35px; border-bottom: 1px solid #edf2f7; padding-bottom: 20px; }
+        .job-card:last-child { border: none; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+        .job-title { font-size: 1.25rem; font-weight: 700; color: var(--primary); }
+        .job-date { color: var(--secondary); font-weight: 600; font-size: 0.95rem; }
+        .job-details { list-style: none; padding-left: 0; }
+        .job-details li::before { content: "▹"; color: var(--secondary); margin-right: 10px; font-weight: bold; }
 
-        /* Skills & Buttons */
-        .skill-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-badge { background: var(--primary); color: white; padding: 6px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; }
-        .skill-badge.high { background: var(--accent); }
+        .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+        .skill-tag { background: #e2e8f0; padding: 8px 15px; border-radius: 8px; text-align: center; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .skill-tag:hover { background: var(--secondary); color: white; }
+        .skill-tag.focus { background: var(--accent); color: white; }
 
-        /* Zertifikate Links */
-        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .cert-link { display: flex; align-items: center; gap: 10px; padding: 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; transition: all 0.2s; color: var(--primary); text-decoration: none; font-size: 0.95rem; }
-        .cert-link:hover { border-color: var(--secondary); background: #f0f7ff; transform: translateY(-2px); }
-        .cert-link::before { content: "🔗"; font-size: 0.8rem; }
+        .cert-button { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; background: #fff; border: 2px solid #e2e8f0; border-radius: 12px; text-decoration: none; color: var(--primary); font-weight: 600; margin: 5px; transition: 0.2s; }
+        .cert-button:hover { border-color: var(--secondary); background: var(--light); transform: translateY(-2px); }
 
-        @media (max-width: 768px) {
-            header { text-align: center; justify-content: center; }
-            .header-info { text-align: center; }
-            .cert-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { header { text-align: center; justify-content: center; } .job-header { flex-direction: column; } }
     </style>
 </head>
 <body>
@@ -60,65 +53,72 @@
     <img src="profil.jpg" alt="Murat Göçmen" class="profile-img">
     <div class="header-info">
         <h1>Murat Göçmen</h1>
-        <div class="tagline">IT-Support-Spezialist | Webdesigner | Führungskraft</div>
-        <div class="contact-grid">
-            <span>📍 Karlsruhe, Deutschland</span>
+        <div class="tagline">IT-Support Specialist | Software-Affinität | SQL-Expertise</div>
+        <div class="contact-box">
+            <span>📍 Karlsruhe</span>
             <span>📞 +49 176 46783721</span>
             <span>📧 muratgoecmen@mail.de</span>
-            <span>🌐 murat2025.github.io</span>
+            <span>🔗 murat2025.github.io</span>
         </div>
     </div>
 </header>
 
-<section id="about">
+<section>
     <h2>Kurzprofil</h2>
-    <div class="bio-text">
-        Als technologiebegeisterte Führungskraft verbinde ich <strong>15 Jahre Management-Erfahrung</strong> mit fundiertem IT-Know-how. Mit einer Spitzenbewertung von <strong>92/100 Punkten in SQL</strong> und praktischer Erfahrung im 1st Level Support löse ich komplexe technische Probleme strukturiert und kundenorientiert. Ich stehe für Zuverlässigkeit, präzise Datenverarbeitung und professionelle Kommunikation.
+    <div class="highlight-card">
+        Als technologiebegeisterte Führungskraft mit einer Leidenschaft für Datenbanken und komplexe Softwarelösungen verbinde ich <strong>15 Jahre Management-Erfahrung</strong> mit fundiertem IT-Know-how. Mit <strong>92/100 Punkten in SQL</strong> und praktischer Erfahrung im 1st Level Support löse ich technische Probleme strukturiert, empathisch und mit dem nötigen "Biss", um mich auch in tiefgehende Software-Architekturen hineinzufuchsen.
     </div>
 </section>
 
-<section id="experience">
-    <h2>Berufliche Stationen</h2>
-    <div class="job-item">
+<section>
+    <h2>Berufserfahrung</h2>
+    <div class="job-card">
         <div class="job-header">
             <span class="job-title">Technischer Support (1st Level) – Vodafone Projekt</span>
             <span class="job-date">05/2025 – Heute</span>
         </div>
-        <p>Technische Fehleranalyse bei Breitband- und TV-Störungen. Konfiguration von Hardware und lösungsorientierte Dokumentation in CRM-Systemen.</p>
+        <ul class="job-details">
+            <li>Systematische Fehleranalyse bei Breitband- und TV-Störungen</li>
+            <li>Anwenderberatung zur Hardware-Konfiguration und Netzwerkoptimierung</li>
+            <li>Professionelle Dokumentation und Fallbearbeitung in komplexen CRM-Systemen</li>
+        </ul>
     </div>
-    <div class="job-item">
+    <div class="job-card">
         <div class="job-header">
             <span class="job-title">Teamleiter / Zusteller – Deutsche Post DHL</span>
             <span class="job-date">03/2010 – 02/2025</span>
         </div>
-        <p>Verantwortung für bis zu 100 Mitarbeiter. Steuerung der Personaleinsatzplanung via SAP und Sicherstellung höchster Qualitätsstandards in der Logistik.</p>
+        <ul class="job-details">
+            <li>Verantwortung für Personalplanung und Qualitätsmanagement (bis zu 100 Mitarbeiter)</li>
+            <li>Sicherer Umgang mit SAP zur Prozesssteuerung und Personaleinsatzplanung</li>
+            <li>Hohe Belastbarkeit und lösungsorientiertes Krisenmanagement</li>
+        </ul>
     </div>
 </section>
 
-<section id="skills">
-    <h2>Technische Kompetenz</h2>
-    <div class="skill-container">
-        <span class="skill-badge high">SQL (92 Punkte)</span>
-        <span class="skill-badge">HTML5 / CSS3</span>
-        <span class="skill-badge">PHP / MySQL</span>
-        <span class="skill-badge">SAP</span>
-        <span class="skill-badge">Netzwerktechnik</span>
-        <span class="skill-badge">CRM-Systeme</span>
-        <span class="skill-badge">Hardware-Diagnose</span>
+<section>
+    <h2>Technische Skills</h2>
+    <div class="skill-grid">
+        <div class="skill-tag focus">SQL (92 Punkte)</div>
+        <div class="skill-tag">CRM-Systeme</div>
+        <div class="skill-tag">HTML5 / CSS3</div>
+        <div class="skill-tag">PHP / MySQL</div>
+        <div class="skill-tag">SAP</div>
+        <div class="skill-tag">Netzwerktechnik</div>
+        <div class="skill-tag">Troubleshooting</div>
+        <div class="skill-tag">Software-Support</div>
     </div>
 </section>
 
-<section id="certificates">
-    <h2>Zertifikate & Belege</h2>
-    <div class="cert-grid">
-        <a href="Lehrgangszertifikat SQL.pdf" class="cert-link" target="_blank">SQL & Datenbanken (92 Punkte)</a>
-        <a href="Lehrgangszertifikat Webdesign.pdf" class="cert-link" target="_blank">Webdesign & HTML/CSS (85 Punkte)</a>
-        <a href="Coursera-Zertifikat.pdf" class="cert-link" target="_blank">Google IT-Support Certificate</a>
-        <a href="Lehrgangszertifikat PHP.pdf" class="cert-link" target="_blank">PHP & MySQL Implementierung</a>
-        <a href="Arbeitszeugnis.pdf" class="cert-link" target="_blank">Arbeitszeugnis Deutsche Post</a>
-        <a href="Elektrofachkraft-für-festgelegte-Tätigkeiten(GK)-Ausnahmebewilligung_Zertifikat.pdf" class="cert-link" target="_blank">Elektrofachkraft (HWK)</a>
-        <a href="Staplerschein_DEKRA.pdf" class="cert-link" target="_blank">Staplerschein (DEKRA)</a>
-        <a href="Führerschein.pdf" class="cert-link" target="_blank">Führerschein (B, C1E)</a>
+<section id="downloads">
+    <h2>Zertifikate & Unterlagen</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <a href="Lehrgangszertifikat SQL.pdf" class="cert-button" target="_blank">📄 SQL Zertifikat (92 Pkt.)</a>
+        <a href="Coursera-Zertifikat.pdf" class="cert-button" target="_blank">📄 Google IT Support</a>
+        <a href="Lehrgangszertifikat Webdesign.pdf" class="cert-button" target="_blank">📄 Webdesign Zertifikat</a>
+        <a href="Arbeitszeugnis.pdf" class="cert-button" target="_blank">📄 Arbeitszeugnis DHL</a>
+        <a href="Elektrofachkraft-für-festgelegte-Tätigkeiten(GK)-Ausnahmebewilligung_Zertifikat.pdf" class="cert-button" target="_blank">📄 Elektrofachkraft</a>
+        <a href="Staplerschein_DEKRA.pdf" class="cert-button" target="_blank">📄 Staplerschein</a>
     </div>
 </section>
 
